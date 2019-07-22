@@ -11,3 +11,15 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+# Setup ZSH in vi mode
+set -o vi
+
+# Setup Python 3 as default
+export PATH=/usr/local/opt/python/libexec/bin:$PATH
+
+# Setup Brew Vim as default
+export PATH=/usr/local/bin/vim:$PATH
+
+# Use ripgrep for FZF
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!{.git,node_modules}"'
